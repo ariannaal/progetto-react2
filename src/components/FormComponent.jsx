@@ -54,7 +54,7 @@ function FormComponent() {
         <div className="mt-4 d-flex flex-column align-items-center form-wrapper">
             <Form.Group className="w-100" style={{ maxWidth: '400px' }}>
                 <Form.Control
-                    className='form-control fw-bold'
+                    className='form-control'
                     style={{ textAlign: 'center' }}
                     type="search"
                     placeholder="Search a place"

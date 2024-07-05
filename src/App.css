@@ -20,21 +20,13 @@
   color: rgba(255, 255, 255, 0.372);
 }
 
-.background-image {
-  background-image: url('https: //plus.unsplash.com/premium_photo-1669991406391-aba0cd13a391?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-  background-size: cover;
-  /* Adatta l'immagine alle dimensioni del contenitore */
+.bg-image {
+  background-image: url('https://images.unsplash.com/photo-1706178182179-c008245a1255?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-size: cocver;
   background-position: center;
-  /* Posiziona l'immagine al centro */
   background-repeat: no-repeat;
-  /* Evita la ripetizione dell'immagine */
   height: 100vh;
-  /* Altezza del container, adattabile alle dimensioni del contenuto */
-  display: flex;
-  /* Per allineare il contenuto al centro */
-  justify-content: center;
-  /* Allinea il contenuto al centro */
-  align-items: center;
+
 }
 
 .future-card {
