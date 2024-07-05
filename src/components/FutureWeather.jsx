@@ -53,7 +53,7 @@ function FutureWeather({ lat, lon }) {
 
     return (
         <div>
-            <h2 className="text-center my-5">Future Weather</h2>
+            <h2 className="text-center text my-5">Future Weather</h2>
             {Object.keys(groupedForecasts).map(day => (
                 <div key={day} className="row mb-3">
                     <div className="col">

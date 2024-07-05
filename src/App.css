@@ -15,6 +15,11 @@
   border: 1px solid #38598B !important;
 }
 
+.footer {
+  background-color: #38598B !important;
+  color: rgba(255, 255, 255, 0.372);
+}
+
 .future-card {
   background-color: #38598B !important;
   width: 1000px;
@@ -50,7 +55,6 @@
 
   background-color: #38598B !important;
 }
-
 
 
 .list-item:hover {
