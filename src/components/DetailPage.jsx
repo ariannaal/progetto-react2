@@ -72,9 +72,7 @@ function DetailPage() {
                             Min: {degrees(placeData.main.temp_min)} °C{" "}
                         </p>
                     </div>
-                    {/* <h5 className="text-center mt-3 text">{placeData.weather[0].description}</h5> */}
-                    {/* <Row className="mt-5 w-100">
-                <Col  xs={12} sm={6} md={4}> */}
+                    <h5 className="text-center mt-3 text">{placeData.weather[0].description}</h5>
 
                     <div className="d-flex justify-content-center gap-5">
                         <Card className="custom-card">
