@@ -36,7 +36,7 @@ function FutureWeather({ lat, lon }) {
 
     return (
         <div >
-            <h2 className="text-center my-5">Future Weather</h2>
+            <h2 className="text-center text my-5">Future Weather</h2>
             <div className="d-flex justify-content-center flex-wrap">
                 {forecastData.map((forecast, index) => (
                     <div key={index} className='card custom-card m-2'>
