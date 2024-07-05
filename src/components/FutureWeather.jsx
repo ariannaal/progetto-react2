@@ -59,7 +59,7 @@ function FutureWeather({ lat, lon }) {
 
                     <div className="card future-card">
                         <div className="card-body custom-card-body d-flex">
-                            <h5 className="card-title text-white text-center mb-4">
+                            <h5 className="card-title text-white text-center my-auto">
                                 {new Date(groupedForecasts[day][0].dt * 1000).toLocaleDateString('en-US', { weekday: 'long', month: 'short', day: 'numeric' })}
                             </h5>
                             {groupedForecasts[day].map((forecast, index) => (
