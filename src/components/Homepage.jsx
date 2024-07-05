@@ -7,7 +7,7 @@ import MyFooter from "./MyFooter";
 const Homepage = () => (
 
     <>
-        <div className="container-forecast">
+        <div className="bg-image">
 
             <h2 className="text-center pt-5 text">Your weather, wherever you are.</h2>
             <FormComponent />

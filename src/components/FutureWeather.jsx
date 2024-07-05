@@ -55,35 +55,35 @@ function FutureWeather({ lat, lon }) {
         <div>
             <h2 className="text-center text my-5">Future Weather</h2>
             {Object.keys(groupedForecasts).map(day => (
-                <div key={day} className="row mb-3">
-                    <div className="col">
-                        <div className="card future-card">
-                            <div className="card-body custom-card-body d-flex">
-                                <h5 className="card-title text-white text-center mb-4">
-                                    {new Date(groupedForecasts[day][0].dt * 1000).toLocaleDateString('en-US', { weekday: 'long', month: 'short', day: 'numeric' })}
-                                </h5>
-                                {groupedForecasts[day].map((forecast, index) => (
-                                    <div key={index} className="mb-3 single-fw">
-                                        <p className="text-center text-white">
-                                            {getHours(new Date(forecast.dt * 1000))}:00
-                                        </p>
-                                        <p className="text-center text-white fw-bold">
-                                            {degrees(forecast.main.temp)} °C
-                                        </p>
-                                        <p className="text-center text-white">
-                                            {forecast.weather[0].description}
-                                        </p>
-                                        <img
-                                            src={`http://openweathermap.org/img/w/${forecast.weather[0].icon}.png`}
-                                            alt="Weather Icon"
-                                            className="d-block mx-auto"
-                                        />
-                                    </div>
-                                ))}
-                            </div>
+                <div key={day} className="d-flex mb-3">
+
+                    <div className="card future-card">
+                        <div className="card-body custom-card-body d-flex">
+                            <h5 className="card-title text-white text-center mb-4">
+                                {new Date(groupedForecasts[day][0].dt * 1000).toLocaleDateString('en-US', { weekday: 'long', month: 'short', day: 'numeric' })}
+                            </h5>
+                            {groupedForecasts[day].map((forecast, index) => (
+                                <div key={index} className="mb-3 single-fw">
+                                    <p className="text-center text-white">
+                                        {getHours(new Date(forecast.dt * 1000))}:00
+                                    </p>
+                                    <p className="text-center text-white fw-bold">
+                                        {degrees(forecast.main.temp)} °C
+                                    </p>
+                                    <p className="text-center text-white">
+                                        {forecast.weather[0].description}
+                                    </p>
+                                    <img
+                                        src={`http://openweathermap.org/img/w/${forecast.weather[0].icon}.png`}
+                                        alt="Weather Icon"
+                                        className="d-block mx-auto"
+                                    />
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </div>
+
             ))}
         </div>
     );
