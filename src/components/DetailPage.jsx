@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
-import { Row, Col, Card } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import iconWind from "../assets/images/wind-solid.svg";
 import iconPressure from "../assets/images/temperature.svg";
 import iconHumidity from "../assets/images/droplet-solid.svg";
+import FutureWeather from './FutureWeather';
 
 function DetailPage() {
+
     const { lat, lon } = useParams();
     const [placeData, setPlaceData] = useState(null);
 
@@ -50,7 +52,7 @@ function DetailPage() {
         <div className="container-forecast">
             {placeData && (
                 <div>
-                    <h4 className="text">{convertUnixToDate(placeData.dt)}</h4>
+                    <h4 className="text ps-4 pt-4">{convertUnixToDate(placeData.dt)}</h4>
                     <h2 className="text-center my-5 text">
                         {placeData.name}, {placeData.sys.country}
                     </h2>
@@ -74,7 +76,7 @@ function DetailPage() {
                     </div>
                     <h5 className="text-center mt-3 text">{placeData.weather[0].description}</h5>
 
-                    <div className="d-flex justify-content-center gap-5">
+                    <div className="d-flex justify-content-center gap-5 my-5">
                         <Card className="custom-card">
                             <Card.Body className="custom-card-body">
                                 <div className="d-flex">
@@ -131,6 +133,7 @@ function DetailPage() {
                     </div>
                 </div>
             )}
+            <FutureWeather lat={lat} lon={lon} />
         </div>
     );
 }
